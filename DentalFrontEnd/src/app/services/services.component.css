@@ -1,0 +1,28 @@
+#service{
+    margin-right:1.5rem; 
+    height: 200px;
+    line-height: 2;
+    font-size: 1.3rem;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+ }
+ #service1{
+    height: 200px;
+    line-height: 2;
+    font-size: 1.3rem;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+ }
+ .heading{
+   
+   text-align: center;
+   font-size: 4rem;
+   color:var(--black);
+   text-transform: uppercase;
+   margin-bottom: 3rem; 
+}
+section{
+   padding: 2rem;
+}

@@ -1,0 +1,29 @@
+<section>
+    <form (ngSubmit)="displayPatients()">
+        <span>appointment date :</span>
+        <input type="date"  name="date" class="box" value="" ngModel required #date>
+        <input type="submit" value="check">
+    </form>
+    
+    <br>
+    <div class="patientsDetails">
+        <h1 *ngIf="number_of_patients >0"> Details of the Patients</h1>
+        <h1 *ngIf="number_of_patients===0"> No appointments made for this day !!</h1>
+        <table *ngIf="number_of_patients >0">
+            <tr>
+                <th>Name</th>
+                <th>Mail Id</th>
+                <th>Number</th>
+                <th>time</th>
+            </tr>
+            <tr *ngFor="let patient of allPatients">
+                <td>{{patient.name}}</td>
+                <td>{{patient.email}}</td>
+                <td>{{patient.phoneNumber}}</td>
+                <td>{{patient.timeslot}}</td>
+            </tr>
+            
+        </table>
+
+    </div>
+</section>

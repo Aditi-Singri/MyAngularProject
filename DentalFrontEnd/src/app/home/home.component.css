@@ -1,0 +1,43 @@
+.home1{
+    background:url(home-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+ }
+ 
+ /* .home .content{
+    width: 55rem;
+    padding:2rem;
+ } */
+ 
+ .home .content h3{
+    font-size: 5.5rem;
+    text-transform: uppercase;
+    color:var(--black);
+ }
+ 
+ .home .content p{
+    line-height: 2;
+    font-size: 1.25rem;
+    color:var(--light-color);
+    padding:1rem 0;
+ }
+ .home .content a{
+    width: 23rem;
+ }
+ .link-btn{
+    display: inline-block;
+    padding:1rem 3rem;
+    border-radius: .5rem;
+    background-color: var(--blue);
+    cursor: pointer;
+    font-size: 1.7rem;
+    color:var(--white);
+ }
+ 
+ .link-btn:hover{
+    background-color: var(--black);
+    color:var(--white);
+ }
+ section{
+   padding:10rem 2rem;
+}

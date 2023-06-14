@@ -1,0 +1,25 @@
+<header class="header fixed-top">
+
+    <div class="container">
+  
+       <div class="d-flex flex-row align-items-center justify-content-between">
+            
+          <a href="#home" class="logo">dental<span>Care.</span></a>
+  
+          <nav class="nav">
+           <a [routerLinkActive]="'activeroute'" routerLinkActiveOptions="{exact:true}" routerLink="Home" >home</a>
+             <a [routerLinkActive]="'activeroute'" routerLink="About">about</a>
+             <a [routerLinkActive]="'activeroute'"  routerLink="Services">services</a>
+             <a [routerLinkActive]="'activeroute'"  (click)="openloginbefore()" routerLink="Contact" >contact</a>
+          </nav>
+           <nav *ngIf="!loginservice.loggedIn">
+           <a  class="head-button" routerLink="Login"   (click)="openlogin()" ><img  class="login-icon" src={{ImagePath}} style="height: 32px; padding-right:5px;">login/signup</a>
+        </nav>
+         <nav *ngIf="loginservice.loggedIn">
+            <a  class="head-button" routerLink="Login"   (click)="openlogin()" ><img  class="login-icon" src={{ImagePath}} style="height: 32px; padding-right:5px;">logout</a>
+         </nav> 
+       </div>
+  
+    </div>
+  
+  </header>

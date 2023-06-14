@@ -1,0 +1,23 @@
+<section class="contact" id="contact">
+
+    <h1 class="heading">Input the details for registration</h1>
+ 
+    <form (ngSubmit)="insertUsers()" #form="ngForm">
+       
+       <span> name :</span>
+       <input type="text" placeholder="enter your name" class=" name box" name="name" [(ngModel)]="userInsert.name" required >
+       <span> email :</span>
+       <input type="email" placeholder="enter your email" class=" name box" name="email" [(ngModel)]="userInsert.email" required email >
+       <span> contact number :</span>
+       <input type="email" placeholder="enter your contact" class=" name box" name="phoneNumber" [(ngModel)]="userInsert.phoneNumber" required >
+       <span> password :</span>
+       <input type="password" name="password" placeholder="enter your password" class=" email box" [(ngModel)]="userInsert.password" required #pass>
+       <span>confirm password :</span>
+       <input type="password" name="pass" placeholder="confirm password" (mouseleave)="checkpasswords()" class=" email box" ngModel required #confirmpass>
+       <p *ngIf="!validpasswords">re-entered password should be same !!</p> 
+       <!-- <p *ngIf="!formvalid">All the fields are mandatory !!</p> -->
+       <input type="submit" name="signup" value="submit" [disabled]="form.invalid || !validpasswords "  class="link-btn" routerLink="Login">
+    </form>  
+ 
+ </section>
+ 

@@ -1,0 +1,33 @@
+<section class="contact" id="contact">
+
+    <h1 class="heading">make appointment</h1>
+ 
+    <form (ngSubmit)="insertAppointments()" #myform="ngForm">
+       <span>your name :</span>
+       <input type="text" placeholder="enter your name" class=" name box" name="name" [(ngModel)]="patientInsert.name" required >
+       <span>your email :</span>
+       <input type="email" name="email" placeholder="enter your email" class=" email box" [(ngModel)]="patientInsert.email" required email #mail="ngModel">
+       <p *ngIf="mail.invalid && mail.touched">Input valid mail id !!</p>
+       <span>your number :</span>
+       <input type="text" name="phoneNumber" placeholder="enter your number" class="number box" [(ngModel)]="patientInsert.phoneNumber" required>
+       <span>appointment date :</span>
+       <input type="date" name="date" class="box" [(ngModel)]="patientInsert.date" required>
+       <span>select time slot :</span><br>
+      <br>
+       <div class="time">
+         <input type="radio" name="timeslot" value="10-11am" [(ngModel)]="patientInsert.timeslot"><label class="timeslots">10-11am</label>
+         <input type="radio" name="timeslot" value="11am-12pm" [(ngModel)]="patientInsert.timeslot"><label class="timeslots">11am-12pm</label>
+         <input type="radio" name="timeslot" value="12-1pm" [(ngModel)]="patientInsert.timeslot"><label class="timeslots">12-1pm</label>
+         <input type="radio" name="timeslot" value="5-6pm" [(ngModel)]="patientInsert.timeslot"><label class="timeslots">5-6pm</label>
+         <input type="radio" name="timeslot" value="6-7pm" [(ngModel)]="patientInsert.timeslot"><label class="timeslots">6-7pm</label>
+         <input type="radio" name="timeslot" value="7-8pm" [(ngModel)]="patientInsert.timeslot"><label class="timeslots">7-8pm</label>
+       </div>
+       
+       <p *ngIf="myform.invalid">All the fields are mandatory !!</p>
+       <input type="submit" value="make appointment" name="submit" [disabled]="myform.invalid" class="link-btn">
+
+    </form>  
+ 
+ </section>
+ 
+ 

@@ -1,0 +1,16 @@
+<section  class="contact" id="contact">
+
+    <h1 class="heading">Login Before You Proceed</h1>
+ 
+    <form #myform="ngForm">
+       
+       <span>your mail id :</span>
+       <input type="email" placeholder="enter your mail" class=" name box" name="mail" ngModel required #mail>
+       <span>your password :</span>
+       <input type="password" name="pass" placeholder="enter your email" class=" email box" ngModel required #pass>
+       <a name="Login" (click)="loggedinpage()" class="link-btn">Login</a>
+        <p>Don't have an existing account ? <a  (click)="opensignup()" routerLink="Signup">SignUp</a></p>
+    </form>  
+ 
+ </section>
+ 

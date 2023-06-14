@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "cmc2vyy3SrgU358vG+B1oFmQcnAkmRvWHYbipKTftoM=",
+  "Source": "DentalAppointmentAPI",
+  "BasePath": "_content/DentalAppointmentAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
